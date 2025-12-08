@@ -1,0 +1,40 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(image/movie.jpg);
+    background-size: cover;
+   
+}
+.form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+input{
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(53, 49, 49);
+    border-radius: 20px;
+    border-color:  white;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+   
+    background-color: rgb(28, 30, 32);
+    margin: auto ;
+    color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    padding: 4px 10px ;
+}
