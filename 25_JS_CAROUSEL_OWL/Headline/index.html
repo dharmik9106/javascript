@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Headline</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #e5e7eb;
+            padding: 35px 60px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.6);
+            letter-spacing: 0.5px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        #text {
+            font-weight: 700;
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #22d3ee);
+            background-size: 250%;
+            background-clip: text;
+            color: transparent;
+            animation: gradientMove 4s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 250%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.1rem;
+                padding: 25px 30px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>I am <span id="text"></span></h1>
+
+    <!-- Typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+    <script>
+        new Typed('#text', {
+            strings: [
+                "Front-End Developer",
+                "MERN Stack Developer",
+                "Modern UI Creator"
+            ],
+            typeSpeed: 70,
+            backSpeed: 45,
+            backDelay: 1000,
+            loop: true,
+            showCursor: true,
+            cursorChar: "|"
+        });
+    </script>
+
+</body>
+
+</html>

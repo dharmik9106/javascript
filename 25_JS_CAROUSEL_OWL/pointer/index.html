@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Mouse Follower CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+
+    <title>Modern Cursor Interaction</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #020617, #0f172a, #020617);
+            color: #e5e7eb;
+        }
+
+        .wrapper {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 22px;
+            padding: 60px 70px;
+            text-align: center;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .title {
+            font-size: 3.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.75;
+            margin-bottom: 35px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 36px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: transparent;
+            color: #fff;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border: none;
+            color: #020617;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            .wrapper {
+                padding: 40px 25px;
+            }
+
+            .title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1 class="title" data-cursor-text="Explore ✨">
+            Interactive Cursor
+        </h1>
+
+        <p class="subtitle">
+            Smooth hover effects with modern UI interaction
+        </p>
+
+        <div class="actions">
+            <button class="btn primary" data-cursor-text="Click 🚀">
+                Get Started
+            </button>
+
+            <button class="btn" data-cursor-icon="circle">
+                Learn More
+            </button>
+        </div>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Mouse Follower JS -->
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+    <script>
+        const cursor = new MouseFollower({
+            speed: 0.6,
+            skewing: 3,
+            skewingText: 2
+        });
+    </script>
+
+</body>
+</html>
