@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Modern Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(120deg,#1d4350,#a43931);
+        }
+
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:16px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.4);
+            text-align:center;
+        }
+
+        .card img{
+            width:320px;
+            height:180px;
+            border-radius:12px;
+            object-fit:cover;
+            transition:all 0.5s ease;
+        }
+
+        .actions{
+            margin-top:20px;
+        }
+
+        .actions button{
+            padding:12px 26px;
+            font-size:16px;
+            border:none;
+            border-radius:30px;
+            background:linear-gradient(135deg,#ff512f,#f09819);
+            color:#fff;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .actions button:hover{
+            transform:scale(1.08);
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img id="photo" src="./img.png" alt="image">
+        <div class="actions">
+            <button id="actionBtn">Interact</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

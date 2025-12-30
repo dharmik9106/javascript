@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Animate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(120deg,#141e30,#243b55);
+        }
+
+        .glass{
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(14px);
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 25px 45px rgba(0,0,0,0.4);
+            text-align:center;
+        }
+
+        #btn{
+            padding:14px 45px;
+            font-size:17px;
+            border:none;
+            border-radius:50px;
+            background:linear-gradient(135deg,#ff512f,#dd2476);
+            color:#fff;
+            cursor:pointer;
+            letter-spacing:1px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.35);
+            transition:0.3s;
+        }
+
+        #btn:hover{
+            transform:translateY(-3px) scale(1.05);
+        }
+
+        #img{
+            margin-top:25px;
+            width:260px;
+            height:180px;
+            opacity:0.4;
+            border-radius:18px;
+            box-shadow:0 18px 40px rgba(0,0,0,0.45);
+            position:relative;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="glass">
+    <button id="btn">Animate Image</button>
+    <br>
+    <img src="./img.png" id="img">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
